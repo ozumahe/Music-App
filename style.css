@@ -26,6 +26,19 @@ body {
 }
 /* -X----container-----X- */
 
+/* --------VOLUME---------- */
+.volume-controller-container {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.volume-controller-container .volume {
+  width: 70%;
+  height: 2px;
+}
+/* -X-------VOLUME---------X- */
+
 /* -----Player-container------ */
 .player-container {
   width: 100%;
@@ -67,16 +80,24 @@ body {
 }
 .music-track {
   margin: 10px auto;
-  width: 300px;
-  height: 2px;
-  background: white;
-  border-radius: 10px;
-}
-.music-track .track {
+  width: 80%;
   position: relative;
-  background: #e41749;
-  height: 100%;
-  width: 50%;
+  box-shadow: 0 0 20px 10 rgba(255, 255, 255, 0.5);
+}
+
+.music-track .track {
+  -webkit-appearance: none;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, purple 0%, white 0%);
+}
+.music-track .track::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background: rgb(155, 16, 155);
+  border-radius: 50%;
+  box-shadow: 0 0 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .music-counter {
@@ -109,43 +130,6 @@ body {
   font-size: 13px;
   font-weight: 500;
 }
-.lyrics-container {
-  background: rgba(0, 0, 0, 0.9);
-  left: 0;
-  bottom: 0;
-  height: 500px;
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  text-align: center;
-  padding: 1rem;
-  transform: translateY(0);
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  transition: transform 0.3s linear;
-  overflow-y: auto;
-}
-
-.lyrics-container.show {
-  transform: translateY(-70%);
-}
-.lyrics-container .show-lyrics {
-  background: none;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-.lyrics-container .lyrics-text {
-  padding: 0;
-  margin: 0;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 2px;
-  font-family: "Noto Sans Mono", monospace;
-}
 /* -X----Player-container-----X- */
 
 /* -----list------ */
@@ -169,3 +153,4 @@ body {
   right: 5px;
 }
 /* -X----list-----X- */
+

@@ -20,7 +20,20 @@
     <!-- Container -->
     <div id="container" class="container">
       <!-- player-container -->
-      <!-- <div id="player-container" class="player-container">
+      <div id="player-container" class="player-container">
+        <div class="volume-controller-container">
+          <i class="fas fa-volume-down"></i>
+          <input
+            type="range"
+            name="volume"
+            min="0"
+            max="100"
+            value="50"
+            id="volume"
+            class="volume"
+          />
+          <i class="fas fa-volume-up"></i>
+        </div>
         <div class="image">
           <img id="image" src="" alt="" />
         </div>
@@ -39,11 +52,14 @@
           </div>
         </div>
         <div class="music-track">
-          <div class="track"></div>
+          <input type="range" name="track" value="0" class="track" id="track" />
+          <div class="thumb" id="thumb">
+            <div class="thumbBtn" id="thumbBtn"></div>
+          </div>
         </div>
         <div class="music-counter">
-          <small>10:3</small>
-          <small>0:3</small>
+          <small id="current-time">00:00</small>
+          <small id="duration">00:00</small>
         </div>
         <div class="control-btns">
           <button id="shuffle" class="shuffle">
@@ -62,17 +78,11 @@
             <i class="fas fa-repeat"></i>
           </button>
         </div>
-        <div class="lyrics-container">
-          <button id="show-lyrics" class="show-lyrics">
-            <i class="fas fa-arrow-circle-up"></i>
-          </button>
-          <p class="lyrics-text" id="lyrics-text"></p>
-        </div>
-        <audio id="audio" ></audio>
-      </div> -->
+        
+        <audio id="audio"></audio>
+      </div>
       <!-- X----player-container----X -->
-     
-
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
